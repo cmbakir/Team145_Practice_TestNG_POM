@@ -39,9 +39,29 @@ public class AkakceArama {
         AkakcePage akakcePage = new AkakcePage();
         akakcePage.aramaKutusu.click();
         akakcePage.aramaKutusu.sendKeys("iPhone 16 Pro Max" + Keys.ENTER);
-        ReusableMethods.bekle(3);
+        ReusableMethods.bekle(2);
+       // JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+       // WebElement dahiliHafiza= Driver.getDriver().findElement(By.xpath("(//*[@class='fl-ac'])[3]"));
+
+       //  jse.executeScript("","");
+
+       //  jse.executeScript("arguments[0].scrollIntoView({block: 'center’}); ", dahiliHafiza);
+
+        //akakcePage.checkBox256gb.click();
+
+        //akakcePage.checkBox256gb.click();
+
+
         akakcePage.ceptelefonuSekmesi.click();
-        ReusableMethods.bekle(3);
+        ReusableMethods.bekle(2);
+
+        //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+
+       // js.executeScript("","");
+
+       // js.executeScript("arguments[0].scrollIntoView({block: 'center’}); ", akakcePage.dahiliHafiza);
+
+      //  akakcePage.checkBox256gb.click();
 
         //Actions actions = new Actions(Driver.getDriver());
        // actions.sendKeys(Keys.PAGE_DOWN).perform();
