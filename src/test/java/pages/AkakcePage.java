@@ -37,6 +37,8 @@ public class AkakcePage {
     @FindBy (xpath = "//span[@class='pt_v8']")
     public WebElement iphone16SatisFiyatlari;
 
+    @FindBy (xpath = "//*[@alt='Pttavm']")
+    public WebElement iphoneSaticilari;
 
 
 }

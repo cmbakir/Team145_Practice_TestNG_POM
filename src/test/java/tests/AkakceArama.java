@@ -36,6 +36,7 @@ public class AkakceArama {
 
         Driver.getDriver().get(ConfigReader.getProperty("akakceUrl"));
 
+
         AkakcePage akakcePage = new AkakcePage();
         akakcePage.aramaKutusu.click();
         akakcePage.aramaKutusu.sendKeys("iPhone 16 Pro Max" + Keys.ENTER);
@@ -90,12 +91,25 @@ public class AkakceArama {
 
         List<WebElement> urunFiyatlariListesiElementi =
                 Driver.getDriver().findElements(By.xpath("//span[@class='pt_v8']"));
-       List<String> stringListe = ReusableMethods.getElementsText(urunFiyatlariListesiElementi);
-       Collections.sort(stringListe);
-        System.out.println(stringListe);
+       List<String> stringFiyatListe = ReusableMethods.getElementsText(urunFiyatlariListesiElementi);
+
+        System.out.println(stringFiyatListe);
 
 
 
+
+    //   List<WebElement> urunSaticilariListesiElementi =
+    //           Driver.getDriver().findElements(By.xpath("//*[@class='l']"));
+       // List<String> stringSaticiListe = ReusableMethods.getElementsText(urunSaticilariListesiElementi);
+      //  Collections.sort(stringFiyatListe);
+
+   //     System.out.println(stringFiyatListe);
+ //       System.out.println(stringSaticiListe);
+        String enUcuz = stringFiyatListe.get(0);
+
+     //   Collections.sort(stringFiyatListe);
+
+        System.out.println("Akakcede sitesindeki en ucuz iPhone 16 Pro Max fiyati " +enUcuz+ "dir");
 
         Driver.quitDriver();
 
