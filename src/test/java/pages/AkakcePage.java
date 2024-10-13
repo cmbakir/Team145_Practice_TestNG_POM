@@ -25,11 +25,17 @@ public class AkakcePage {
     @FindBy (xpath = "//*[@id='c109306']")
     public WebElement checkBox256gb;
 
+    @FindBy (xpath = "//*[@id='c134091']")
+    public WebElement apple;
+
     @FindBy (xpath = "//*[@id='FF_v8']")
     public WebElement solTaraftakiForm;
 
     @FindBy (xpath = "//*[@class='pt_v8']")
     public WebElement urunFiyatlari;
+
+    @FindBy (xpath = "//span[@class='pt_v8']")
+    public WebElement iphone16SatisFiyatlari;
 
 
 

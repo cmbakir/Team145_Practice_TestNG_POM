@@ -40,20 +40,33 @@ public class AkakceArama {
         akakcePage.aramaKutusu.click();
         akakcePage.aramaKutusu.sendKeys("iPhone 16 Pro Max" + Keys.ENTER);
         ReusableMethods.bekle(2);
-       // JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
+        akakcePage.ceptelefonuSekmesi.click();
+        ReusableMethods.bekle(3);
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
        // WebElement dahiliHafiza= Driver.getDriver().findElement(By.xpath("(//*[@class='fl-ac'])[3]"));
 
        //  jse.executeScript("","");
 
-       //  jse.executeScript("arguments[0].scrollIntoView({block: 'center’}); ", dahiliHafiza);
+        jse.executeScript("arguments[0].scrollIntoView({block: 'center'}); ", akakcePage.apple);
+        akakcePage.apple.click();
+        ReusableMethods.bekle(1);
 
-        //akakcePage.checkBox256gb.click();
+        jse.executeScript("arguments[0].scrollIntoView({block: 'center'}); ", akakcePage.dahiliHafiza);
+        akakcePage.dahiliHafiza.click();
+        ReusableMethods.bekle(1);
 
-        //akakcePage.checkBox256gb.click();
-
-
-        akakcePage.ceptelefonuSekmesi.click();
+        jse.executeScript("arguments[0].scrollIntoView({block: 'center'}); ", akakcePage.checkBox256gb);
         ReusableMethods.bekle(2);
+        akakcePage.checkBox256gb.click();
+        ReusableMethods.bekle(2);
+
+        //akakcePage.checkBox256gb.click();
+
+        //akakcePage.checkBox256gb.click();
+
+
+      // akakcePage.ceptelefonuSekmesi.click();
+
 
         //JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
@@ -72,9 +85,11 @@ public class AkakceArama {
 
         //akakcePage.dahiliHafiza.click();
 
-        List<WebElement> urunFiyatlariListesiElementi =
-                Driver.getDriver().findElements(By.xpath("//*[@class='pt_v8']"));
+      //  List<WebElement> urunFiyatlariListesiElementi =
+       //         Driver.getDriver().findElements(By.xpath("//*[@class='pt_v8']"));
 
+        List<WebElement> urunFiyatlariListesiElementi =
+                Driver.getDriver().findElements(By.xpath("//span[@class='pt_v8']"));
        List<String> stringListe = ReusableMethods.getElementsText(urunFiyatlariListesiElementi);
        Collections.sort(stringListe);
         System.out.println(stringListe);
